@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-3</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary-subtle position-fixed opacity-75 z-3 w-100 ">
+        <div class="container-fluid">
+          <a href="#"><img width="60" class="rounded-circle me-2" src="Images/logo/9379.png_860.png" alt=""></a>
+          <a class="navbar-brand border-end border-primary pe-2 title " href="#">Resturant & Cafa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link text-primary " href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown d-s">
+                <a class="nav-link dropdown-toggle border border-primary border-1 rounded text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dishes
+                </a>
+                <ul class="dropdown-menu bg-primary bg-opacity-50 ">
+                  <li><a class="dropdown-item text-black" href="#">Fatta </a></li>
+                  <li><a class="dropdown-item text-black" href="#">Koshari </a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-black" href="#">Bamia </a></li>
+                  <li><a class="dropdown-item text-black" href="#">Molokhia </a></li>
+                  <li><a class="dropdown-item text-black" href="#">Hawawshi </a></li>
+                  <li><a class="dropdown-item text-black" href="#">Shawarma </a></li>
+                  <li><a class="dropdown-item text-black" href="#">Mombar  </a></li>
+                  <li><a class="dropdown-item text-black" href="#"> More ...
+                  </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary " aria-disabled="true">About Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 border-1 border-primary" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-dark bg-primary text-light mx-2" type="submit">Search</button>
+              <button class="btn btn-outline-dark bg-primary text-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- login form -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary">
+              <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Login</h1>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-1">
+              <div id="intro" class="bg-image shadow-2-strong">
+                <div class="mask d-flex align-items-center h-100">
+                  <div class="container">
+                    <div class="justify-content-center">
+                      <div>
+                        <form class="bg-white rounded shadow-5-strong p-3">
+                          <!-- Email input -->
+                          <div class="form-outline" data-mdb-input-init>
+                            <label class="form-label text-primary" for="form1Example1">Email address</label>
+                            <input type="email" id="form1Example1" class="form-control border-primary" />
+                            <span><small>we'll never share your email with any one else</small></span>
+                          </div>
+          
+                          <!-- Password input -->
+                          <div class="form-outline my-2" data-mdb-input-init>
+                            <label class="form-label text-primary" for="form1Example2">Password</label>
+                            <input type="password" id="form1Example2" class="form-control border-primary" />
+                          </div>
+          
+                          <!-- 2 column grid layout for inline styling -->
+                          <div class="row">
+                            <div class="col d-flex justify-content-start">
+                              <!-- Checkbox -->
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                                <label class="form-check-label text-primary" for="form1Example3">
+                                  Remember me
+                                </label>
+                              </div>
+                              <hr>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary me-auto" data-bs-dismiss="modal">Login</button>
+              <button type="button" data-bs-dismiss="modal" class="btn btn-primary">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slider -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Images/dishes/Koshari.jpg" class="w-100 vh-100" alt="...">
+            <div class="carousel-caption d-md-block bg-primary bg-opacity-50 rounded">
+              <h5>Koshari</h5>
+              <p>is one of the most typical Egyptian dishes , Koshary is a mixture of rice, lentils, chickpeas, and noodles served with tomato sauce</p>
+              <button class="btn btn-primary">More Details</button>
+            </div>
+          </div>
+          <div class="carousel-item  ">
+            <img src="Images/dishes/Kofta.jpg" class="w-100 vh-100" alt="...">
+            <div class="carousel-caption d-md-block bg-primary bg-opacity-50 rounded">
+              <h5>Egyptian Lamb Kofta</h5>
+              <p>Kofta or kufta is one of the most famous dishes of the Arab countries. Each country has different ways of preparing them, so there are countless recipes and variants of kofta.</p>
+              <button class="btn btn-primary">More Details</button>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <img src="Images/dishes/el-cairo-Baklava-888.jpg" class="w-100 vh-100" alt="...">
+            <div class="carousel-caption d-md-block bg-primary bg-opacity-50 rounded">
+              <h5>Baklava</h5>
+              <p>We have made sure to leave the dessert for last: a delicious puff pastry filled with nuts (usually pistachios, walnuts and almonds).</p>
+              <button class="btn btn-primary">More Details</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- social fixed links -->
+       <aside class="position-fixed text-center">
+        <a href="#"><i class="fa-brands fa-square-facebook d-block text-primary mb-3"></i></a>
+        <a href="#"><i class="fa-brands fa-square-whatsapp d-block text-primary mb-3"></i></a>
+        <a href="#"><i class="fa-brands fa-square-twitter d-block text-primary mb-3"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin d-block text-primary mb-3"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram d-block text-primary mb-3"></i></a>        
+       </aside>
+       <!-- welcome -->
+        <div class="bg-dark-subtle p-4">
+          <div class="container">
+            <h2 class="title">welcome</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam mollitia laboriosam minus adipisci dolorum nisi! Non enim, sequi illo, quos iste dolor animi eos natus possimus doloribus, quo modi aut.</p>
+            <button class="btn btn-primary" >Learn More</button>
+          </div>
+        </div>
+        <hr>
+        <!-- Accordion -->
+         <h2 class="p-5 text-light text-center bg-primary bg-opacity-75 ">Popular egyptian dishes</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header bg-body-primary">
+              <button class="accordion-button title shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Koshari 
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body bg-primary-subtle">
+                <strong>The Koshari, is one of the most typical Egyptian dishes,</strong> so much so that there is a popular saying that says “It is very likely that all Egyptians have eaten kushari at least once in their lives”.
+
+                Koshary is a mixture of rice, lentils, chickpeas, and noodles served with tomato sauce – enriched with lots of garlic – and browned onions.
+                
+                Depending on taste, vinegar and/or hot tomato sauce can be added. The mixture of the ingredients sounds a bit strange, but it is very tasty and satiating because of the many carbohydrates.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header bg-body-primary">
+              <button class="accordion-button collapsed title shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Bamia 
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body bg-primary-subtle">
+                <strong>Bamia is a very typical Egyptian dish, </strong>which is made mainly of okra and meat. In case you did not know, okra is very beneficial for our body, and you will also discover its benefits.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header bg-body-primary">
+              <button class="accordion-button collapsed title shadow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Falafel 
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body bg-primary-subtle">
+                <strong>Falafel or Tamiya are delicious beans or chickpea croquettes very popular in all Arab countries,</strong> especially Egypt. They are very soft on the inside and crunchy on the outside so they are loved by all members of the family and very beneficial thanks to the mixture of vegetables they contain.
+
+                In Egypt, it is very typical to eat falafel with ful medames (Egyptian beans), green tea, and Baladi Aish.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- translation section -->
+        <h2 class="p-5 text-light text-center bg-primary bg-opacity-75 ">Translate From Arabic To English</h2>
+        <div class="bg-primary bg-opacity-50 p-4">
+          <div class="container">
+            <p class="text-light">Write and Translate <span class="text-dark">Press Here</span></p>
+            <span class="btn-copy"
+             data-bs-placement="right"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Copy to cilboard"
+            data-bs-toggle="popover" 
+            data-bs-trigger="hover" 
+            >
+              <button 
+              data-bs-toggle="popover" data-bs-placement="right"
+              data-bs-custom-class="custom-popover"
+              data-bs-title="Copid ....."
+              data-bs-trigger="focus "
+
+              class="btn btn-light text-primary " 
+              type="button" 
+              >Copy</button>
+            </span>
+            <br>
+            <textarea class="mt-3 w-100 rounded"  placeholder="translate...."  rows="5" name="" id=""></textarea>
+          </div>
+        </div>
+        <hr>
+        <h2 class="p-5 text-light text-center bg-primary bg-opacity-75 ">Translate From Arabic To French</h2>
+        <div class="bg-primary bg-opacity-50 p-4">
+          <div class="container">
+            <p class="text-light">Write and Translate <span class="text-dark">Press Here</span></p>
+            <span class="btn-copy"
+             data-bs-placement="right"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Copy to cilboard"
+            data-bs-toggle="popover" 
+            data-bs-trigger="hover" 
+            >
+              <button 
+              data-bs-toggle="popover" data-bs-placement="right"
+              data-bs-custom-class="custom-popover"
+              data-bs-title="Copid ....."
+              data-bs-trigger="focus "
+
+              class="btn btn-light text-primary " 
+              type="button" 
+              >Copy</button>
+            </span>
+            <br>
+            <textarea class="mt-3 w-100 rounded"  placeholder="translate...."  rows="5" name="" id=""></textarea>
+          </div>
+        </div>
+        <hr>
+        <h2 class="p-5 text-light text-center bg-primary bg-opacity-75 ">Translate From Arabic To German</h2>
+        <div class="bg-primary bg-opacity-50 p-4">
+          <div class="container">
+            <p class="text-light">Write and Translate <span class="text-dark">Press Here</span></p>
+            <span class="btn-copy"
+             data-bs-placement="right"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Copy to cilboard"
+            data-bs-toggle="popover" 
+            data-bs-trigger="hover" 
+            >
+              <button 
+              data-bs-toggle="popover" data-bs-placement="right"
+              data-bs-custom-class="custom-popover"
+              data-bs-title="Copid ....."
+              data-bs-trigger="focus "
+
+              class="btn btn-light text-primary " 
+              type="button" 
+              >Copy</button>
+            </span>
+            <br>
+            <textarea class="mt-3 w-100 rounded"  placeholder="translate...."  rows="5" name="" id=""></textarea>
+          </div>
+        </div>
+        
+        
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body text-end">
+        تم نسخ النص
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>  
+     
+        <!-- backgroud section -->
+        <div class="bg-section">
+
+        </div>
+        <!-- card section -->
+         <div class="bg-primary bg-opacity-50">
+          <h2 class="title text-center p-5">POPULAR DISHES IN EGYPT</h2>
+         </div>
+         <div class="container mt-5 overLay">
+          <div class="row row-gap-4 justify-content-around">
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/el-cairo-falafel-888.jpg" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Falafel</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Falafel or Tamiya are delicious beans or chickpea  very popular in Arab countries</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Koshari.jpg" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Koshari</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">The Koshari, is one of the most typical Egyptian dishes </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Shakshuka.jpg" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Shakshuka</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Shakshouka is an Egyptian food and it is one of the easiest dishes to prepare. </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Stuffed-Grape-Leaves.jpg" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Malfuf Mahshi</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Malfuf Mahshi is a traditional Egyptian recipe. </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Kebda.jpg" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Kebda</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">If you order Kebda, you get chopped fried beef liver. </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Kofta.png" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Kofta</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Kofta or kufta is one of the most famous dishes of the Arab countries. </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Molokhiya.png" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Molokhia</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Molokhia is a delicious soup very popular in Arab countries</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 p-4">
+              <div class="card" >
+                <img src="Images/dishes/Pigeon.png" class="card-img-top" height="350" alt="...">
+                <div class="card-body">
+                  <div class="d-flex">
+                    <h5 class="card-title">Pigeon</h5>
+                   <button class="btn btn-primary ms-auto">Know More</button>
+                  </div>
+                  <p class="card-text">Hamam Mahshi is a traditional delicacy of Egyptian food of bird stuffed with rice</p>
+                  
+                </div>
+              </div>
+            </div>
+         </div>
+         </div>
+                 <!-- backgroud section -->
+        <div class="bg-section2 mt-4">
+
+        </div>
+        <hr>
+
+        <!-- thanks section -->
+        <div class="bg-primary bg-opacity-50">
+          <h2 class="title text-center p-5">THANKS FOR</h2>
+         </div>
+         <div class="container mt-5 scale">
+          <div class="row">
+            <div class="col-lg-4 p-4">
+              <div class="card text-bg-dark rounded-5 p-0">
+                <img src="Images/person/chef.jpg" class="card-img opacity-25" alt="...">
+                <div class="card-img-overlay d-flex flex-column">
+                  <h5 class="card-title px-3">All thanks and apprecition</h5>
+                  <p class="card-text px-3"><i class="fa-regular fa-clock"></i> October 17 , 2020</p>
+                  <div class="mt-auto px-3">
+                    <img class="w-25 rounded-circle" src="Images/person/chef.jpg" alt="">
+                    <br>
+                    <span>Shef. Mohammed salem</span>
+                    <br>
+                    <span>The head chef</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 p-4">
+              <div class="card text-bg-dark rounded-5 p-0">
+                <img src="Images/person/WhatsApp Image 2024-11-12 at 16.20.57_3c2f1720.jpg" class="card-img opacity-25" alt="...">
+                <div class="card-img-overlay d-flex flex-column">
+                  <h5 class="card-title px-3">All thanks and apprecition</h5>
+                  <p class="card-text px-3"><i class="fa-regular fa-clock"></i> October 17 , 2020</p>
+                  <div class="mt-auto px-3">
+                    <img class="w-25 rounded-circle " src="Images/person/WhatsApp Image 2024-11-12 at 16.20.57_3c2f1720.jpg" alt="">
+                    <br>
+                    <span>Eng.Mohammed Ayman</span>
+                    <br>
+                    <span>Front End Devoleper</span>                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 p-4">
+              <div class="card text-bg-dark rounded-5 p-0">
+                <img src="Images/person/Mohammed-Ayman.jpg" class="card-img  opacity-25" alt="...">
+                <div class="card-img-overlay d-flex flex-column">
+                  <h5 class="card-title px-3">All thanks and apprecition</h5>
+                  <p class="card-text px-3"><i class="fa-regular fa-clock"></i> October 17 , 2020</p>
+                  <div class="mt-auto px-3">
+                    <img class="w-25 rounded-circle " src="Images/person/Mohammed-Ayman.jpg" alt="">
+                    <br>
+                    <span>Eng. Mo Ayman</span>
+                    <br>
+                    <span>Full Stack Devoleper</span>
+                                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+         <hr>
+         <!-- News section -->
+         <h2 class="title text-center p-3">NEW DISHES</h2>
+
+         <div class="container">
+          <div class="card mb-3">
+            <div class="row g-0 shadow-lg NewsCard rounded-2 overflow-hidden rounded-2 overflow-hidden">
+              <div class="col-md-8 order-lg-0 order-sm-1">
+                <div class="card-body p-5 bg-body-primary">
+                  <h3 class="card-title ">Shish Taouk</h3>
+                  <span class="text-body-primary border-primary underLine "> <small><i class="fa-solid fa-calendar-days"></i> Mon , may 25th 2020</small></span>
+                  <p class="card-text mt-3 mb-5">Shish Taouk is a very typical chicken kebab in, Egypt, Turkey, and Syria. This rich meal is made primarily from grilled marinated chicken and is often put on skewers. Besides being quite simple and fast, it is very loved by the whole family, especially by children .</p>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-tag"></i> Podcast</button>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-clock"></i> 55min</button>
+                  <button class="btn btn-sm text-black btn-secondary btn-outline-primary "><i class="fa-solid fa-play"></i> Play Episode</button>
+
+                </div>
+              </div>
+              <div class="col-md-4 order-lg-1 order-sm-0 curve">
+                <img src="Images/dishes/Shish-Taouk.jpg" class="img-fluid rounded-start h-100" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="row g-0 shadow-lg NewsCard rounded-2 overflow-hidden">
+              <div class="col-md-4 curve0">
+                <img src="Images/dishes/Egyptian-Mombar.jpg" class="img-fluid rounded-start h-100" alt="...">
+              </div>
+              <div class="col-md-8 ">
+                <div class="card-body p-5 bg-body-primary">
+                  <h3 class="card-title ">Mombar (Egyptian Sausage)</h3>
+                  <span class="text-body-primary border-success underLine"> <small><i class="fa-solid fa-calendar-days"></i> Mon , may 25th 2020</small></span>
+                  <p class="card-text mt-3 mb-5">Mombar, Fawaregh or kishke is a veal sausage stuffed with a mixture of rice and fried in oil. This delicious dish is very typical in Egypt and is very delicious . <br> </p>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-tag"></i> Podcast</button>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-clock"></i> 55min</button>
+                  <button class="btn btn-sm text-black btn-secondary btn-outline-success "><i class="fa-solid fa-play"></i> Play Episode</button>
+
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="row g-0 shadow-lg NewsCard rounded-2 overflow-hidden">
+              <div class="col-md-8 order-lg-0 order-sm-1">
+                <div class="card-body p-5 bg-body-primary">
+                  <h3 class="card-title ">Macaroni with Bechamel and Minced Meat </h3>
+                  <span class="text-body-primary border-primary underLine"> <small><i class="fa-solid fa-calendar-days"></i> Mon , may 25th 2020</small></span>
+                  <p class="card-text mt-3 mb-5">If you want a lunch meal that is easy to prepare, suitable for any occasion, and has a sublime flavor, look no further, this recipe is perfect for you. It will not take you more than 1 hour to prepare it, and the result will delight any palate.</p>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-tag"></i> Podcast</button>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-clock"></i> 55min</button>
+                  <button class="btn btn-sm text-black btn-secondary btn-outline-primary "><i class="fa-solid fa-play"></i> Play Episode</button>
+
+                </div>
+              </div>
+              <div class="col-md-4 order-lg-1 order-sm-0 curve">
+                <img src="Images/dishes/macarone.webp" class="img-fluid rounded-start h-100" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="row g-0 shadow-lg NewsCard rounded-2 overflow-hidden">
+              <div class="col-md-4 curve0">
+                <img src="Images/dishes/Hawawshi.jpg" class="img-fluid rounded-start h-100" alt="...">
+              </div>
+              <div class="col-md-8 ">
+                <div class="card-body p-5 bg-body-primary">
+                  <h3 class="card-title ">Hawawshi (Egyptian Meat Pie)</h3>
+                  <span class="text-body-primary border-danger underLine"> <small><i class="fa-solid fa-calendar-days"></i> Mon , may 25th 2020</small></span>
+                  <p class="card-text mt-3 mb-5">Marinated ground beef cooked in a whole loaf of bread either in a toaster or in a regular oven. It is one of the most famous Egyptian food, and you can find it almost in most Egyptian restaurants.</p>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-tag"></i> Podcast</button>
+                  <button class="btn btn-sm btn-secondary text-black"><i class="fa-solid fa-clock"></i> 55min</button>
+                  <button class="btn btn-sm text-black btn-secondary btn-outline-danger "><i class="fa-solid fa-play"></i> Play Episode</button>
+
+                </div>
+              </div>
+        
+            </div>
+          </div>
+          <!-- Jion Us section -->
+         <h2 class="title text-center text-uppercase">Jion US</h2>
+         <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-3 mt-5">
+              <div class="p-2 shadow-lg">
+                <h3 class="text-primary text-capitalize ">subscribe now</h3>
+              <a class="" href="#"><img src="Images/logo/twitter.png" width="200"></a>
+              <p class="text-primary">Go To Link</p>
+              </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="p-2 shadow-lg">
+                <h3 class="text-primary text-capitalize ">subscribe now</h3>
+              <a class="" href="#"><img src="Images/logo/3d-whatsapp-logo-.png" width="200"></a>
+              <p class="text-primary">Go To Link</p>
+              </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="p-2 shadow-lg">
+                <h3 class="text-primary text-capitalize ">subscribe now</h3>
+              <a class="" href="#"><img src="Images/logo/linkedin.png" width="200"></a>
+              <p class="text-primary">Go To Link</p>
+              </div>
+            </div>
+            <div class="col-lg-3 mt-5">
+              <div class="p-2 shadow-lg">
+                <h3 class="text-primary text-capitalize ">subscribe now</h3>
+                <a class="" href="#"><img src="Images/logo/insta.png" width="200"></a>
+                <p class="text-primary">Go To Link</p>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+             <!-- footer -->
+          <footer class="bg-primary bg-opacity-75 mt-3 w-100 text-light text-center p-3">
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 px-5">
+                <hr>
+                <img src="Images/logo/9379.png_860.png" width="75" class="rounded-circle" alt="">
+                <span class="px-3">Good Resturant</span>
+                <hr>
+                <p>Tel : 0000-0000-0000</p>
+                <p>Adress : El-mansoura</p>
+                <p>Fax : 0000-0000-0000</p>
+              </div>
+              <div class="col-lg-4 col-sm-12 px-5">
+                <hr>
+                <img src="Images/logo/9379.png_860.png" width="75" class="rounded-circle" alt="">
+                <span class="px-3">Good Resturant</span>
+                <hr>
+                <p>Tel : 0000-0000-0000</p>
+                <p>Adress : El-mansoura</p>
+                <p>Fax : 0000-0000-0000</p>
+              </div>
+              <div class="col-lg-4 col-sm-12 px-5">
+                <hr>
+                <img src="Images/logo/9379.png_860.png" width="75" class="rounded-circle" alt="">
+                <span class="px-3">Good Resturant</span>
+                <hr>
+                <p>Tel : 0000-0000-0000</p>
+                <p>Adress : El-mansoura</p>
+                <p>Fax : 0000-0000-0000</p>
+              </div>
+
+            </div>
+            <hr>
+            <p class="title fs-4 text-uppercase">copyright &copy; 2020 mohammed ayman good company all right</p>
+            <hr>
+          </footer>
+
+
+    <script src="js/poper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

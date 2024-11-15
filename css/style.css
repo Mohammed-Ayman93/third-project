@@ -1,0 +1,138 @@
+.title{
+  background: -webkit-linear-gradient(blue, var(--bs-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+aside{
+    top: 150px;
+    right: 30px;
+    z-index: 3;  
+}
+aside i{
+    font-size: 50px;
+}
+aside a:hover i{
+    opacity: .5;
+}
+form.d-flex button:hover{
+    opacity: .5;
+}
+.bg-section ,.bg-section2{
+    background-attachment: fixed;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+.bg-section{
+    background-image: url(../Images/background/backgroud.jpg);
+}
+.bg-section2{
+    background-image: url(../Images/background/Photo__Mooncusser_dishes__overview__photo_credit_Brian_Samuels.148.jpg);
+}
+.card{
+    position: relative;
+}
+.overLay .card::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #0b5dd752;
+    transition: 1s;
+}
+.overLay .card::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: #0b5dd752;
+    transition: 1s;
+}
+.overLay .card:hover:after{
+    width: 100%;
+    height: 100%;
+}
+.overLay .card:hover::before{
+    width: 100%;
+    height: 100%;
+}
+.scale .card{
+    transition: .5s;
+}
+.scale .card:hover{
+    transform: scale(.95);
+    background-image: linear-gradient(rgb(0, 22, 217) , rgb(89, 101, 235));
+}
+.curve , .curve0{
+    position: relative;
+    overflow: hidden;
+}
+.curve img, .curve0 img{
+    transition: .5s;
+
+}
+.curve::after,.curve0::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    height: 100%;
+}
+.curve::after{
+    left: 0;
+    border-width: 325px 0px 0px 45px;
+    border-top-color: transparent;
+    border-left-color: #fff;
+}
+.curve0::after{
+    right: 0;
+    border-width: 0px 0px 325px 70px;
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+    border-left-color: transparent;
+}
+.underLine{
+    position: relative;
+}
+.underLine::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    border: 3px solid;
+    border-color: inherit ;
+    bottom: -10px;
+    left: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+.card-img{
+    height: 450px;
+}
+.NewsCard:hover .underLine::after{
+    width: 80%;
+}
+.NewsCard:hover img{
+    transform: scale(1.1);
+}
+footer img{
+    box-shadow: 0px 0px 20px 10px #fff  ;
+}
+.custom-popover,.custom-tooltip{
+    --bs-popover-max-width: 1200px;
+    --bs-popover-header-bg:rgb(13 110 253 / 75%);
+    --bs-popover-header-color: #fff;
+    --popover-border-radius:20px;
+    --popover-border-width:400em ;
+
+  }
+@media (max-width:600px) {
+    .curve::after , .curve0::after{
+        content: none;
+        
+    }
+}
